@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokéBerries</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/c4a8f670ae.js"></script>
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1 class="poke-title">Poké<i class="fas fa-leaf"></i></i>Berries</h1>
+    </header>
+    <main>
+        <div class="card-up">
+            <a class="arrow arrow--left display-none"><i class="fas fa-chevron-left"></i></a>
+            <a class="arrow arrow--right"><i class="fas fa-chevron-right"></i></a>
+            <div class="card-up__item">
+                <div class="berry-sprite"></div>
+                <div></div>
+            </div>
+            <div class="card-up__item">
+                <div class="berry-sprite"></div>
+                <div></div>
+            </div>
+            <div class="card-up__item">
+                <div class="berry-sprite"></div>
+                <div></div>
+            </div>
+            <div class="card-up__item">
+                <div class="berry-sprite"></div>
+                <div></div>
+            </div>
+            <div class="card-up__item">
+                <div class="berry-sprite"></div>
+                <div></div>
+            </div>
+            <div class="card-up__item">
+                <div class="berry-sprite"></div>
+                <div></div>
+            </div>
+            <div class="card-up__item">
+                <div class="berry-sprite"></div>
+                <div></div>
+            </div>
+            <div class="card-up__item">
+                <div class="berry-sprite"></div>
+                <div></div>
+            </div>
+            <div class="card-up__item">
+                <div class="berry-sprite"></div>
+                <div></div>
+            </div>
+            <div class="card-up__item">
+                <div class="berry-sprite"></div>
+                <div></div>
+            </div>
+        </div>
+        <div class="card-down">
+            <div class="card-down__info">
+                <p>Oh, no! Snorlax is hungry!</p>
+                <p>Pick a berry from the list above to see its details, and press the button to feed it to Snorlax.</p>
+                <p>Careful! Snorlax may not like your choice! Keep in mind their nature:</p>
+                <p id="snorlax-nature">nature</p>
+            </div>
+            <div class="card-down__berry display-none">
+                <div class="card-down__title">
+                    <div class="berry-sprite--down"></div>
+                    <div></div>
+                </div>
+                <table class="card-down__table">
+                    <tbody>
+                        <tr>
+                            <td colspan="2" class="card-down__table--align-right">firmness:</td>
+                            <td id="firmness-value"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="card-down__table--align-right">flavor:</td>
+                            <td>spicy: <span id='spicy-value'></span></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"></td>
+                            <td>dry: <span id='dry-value'></span></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"></td>
+                            <td>sweet: <span id='sweet-value'></span></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"></td>
+                            <td>bitter: <span id='bitter-value'></span></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"></td>
+                            <td>sour: <span id='sour-value'></span></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="card-down__table--align-right">size:<br></td>
+                            <td id="size-value"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="card-down__table--align-right">type:</td>
+                            <td id="type-value"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="button">Feed<i class="fas fa-chevron-circle-down"></i></div>
+        </div>
+        <img class="snorlax" src="/sprites/snorlax.png" alt="Snorlax">
+    </main>
+</body>
+
+</html>

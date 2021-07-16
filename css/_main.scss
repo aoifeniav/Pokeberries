@@ -1,0 +1,123 @@
+.berry-sprite {
+    padding-right: 10px;
+}
+
+.berry-sprite--down {
+    padding-right: 10px;
+}
+
+.card-up {
+    @include card;
+    height: 225px;
+    text-transform: capitalize;
+    margin-left: 10px;
+    background-color: var(--color-bg-2);
+    transform: rotate(-3deg);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    &__block-2 {
+        transform: translate(25%, 0);
+    }
+
+    &__item {
+        padding: 5px 0;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            cursor: pointer;
+            text-decoration: dotted;
+            @include scale-up;
+        }
+    }
+}
+
+.card-down {
+    @include card;
+    min-height: 270px;
+    margin-right: 20px;
+    background-color: var(--color-bg-3);
+    transform: rotate(3deg);
+
+    &__info {
+        text-align: center;
+    }
+
+    &__berry {
+        text-transform: capitalize;
+    }
+
+    &__title {
+        text-align: center;
+        font-weight: bold;
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__table {
+        margin: auto;
+
+        &--align-right {
+            text-align: right;
+            padding-right: 10px;
+        }
+    }
+}
+
+#snorlax-nature {
+    text-transform: capitalize;
+}
+
+.button {
+    margin: 30px;
+    padding: 10px 18px;
+    background-color: var(--color-button);
+    border-radius: 50px;
+    color: var(--color-bg-1);
+    text-align: center;
+
+    &:hover {
+        @include scale-up;
+        cursor: pointer;
+    }
+
+    .fa-chevron-circle-down {
+        padding-left: 10px;
+    }
+}
+
+.arrow {
+    font-size: 30px;
+    padding: 10px;
+    color: var(--grey-light);
+    position: absolute;
+    transform: translate(0, -50%);
+    top: 50%;
+
+    &--left {
+        left: -40px;
+    }
+
+    &--right {
+        right: -40px;
+    }
+
+    &:hover {
+        cursor: pointer;
+        color: var(--grey-dark);
+    }
+}
+
+.snorlax {
+    width: 270px;
+    margin: 15px;
+    animation: scale-up-bottom 3s cubic-bezier(0.39, 0.575, 0.565, 1) infinite alternate both;
+}
+
+.display-none {
+    display: none;
+}

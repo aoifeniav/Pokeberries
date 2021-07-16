@@ -1,0 +1,11 @@
+@mixin card {
+    box-sizing: border-box;
+    box-shadow: var(--shadow);
+    width: 280px;
+    padding: 15px 18px;
+    border-radius: 20px;
+}
+
+@mixin scale-up {
+    animation: scale-up-center 0.7s linear infinite alternate both;
+}

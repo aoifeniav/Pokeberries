@@ -1,0 +1,282 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/Montserrat-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/Montserrat-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lemon Grass";
+  src: url("../fonts/lemon_grass/Lemon-Grass.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --color-dark: #111344;
+  --color-button: #52154E;
+  --color-bg-1: #EFE9E7;
+  --color-bg-2: #DAE0F2;
+  --color-bg-3: #F9CFF2;
+  --grey-light: #cccccc;
+  --grey-dark: #888888;
+  --color-white: #ffffff;
+  --shadow: 0px 0px 15px #aaaaaa;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg-1);
+  font-family: "Montserrat";
+  font-weight: normal;
+  font-size: 16px;
+  color: var(--color-dark);
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  100% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+}
+
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  100% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+}
+
+@-webkit-keyframes scale-up-bottom {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+  }
+  100% {
+    -webkit-transform: scale(1.04);
+            transform: scale(1.04);
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+  }
+}
+
+@keyframes scale-up-bottom {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+  }
+  100% {
+    -webkit-transform: scale(1.04);
+            transform: scale(1.04);
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+  }
+}
+
+.poke-title {
+  font-family: 'Lemon Grass';
+  font-size: 65px;
+  text-align: center;
+  margin: 15px 0;
+}
+
+.fa-leaf {
+  color: var(--color-button);
+  font-size: 40px;
+  -webkit-transform: rotate(-195deg);
+          transform: rotate(-195deg);
+}
+
+.berry-sprite {
+  padding-right: 10px;
+}
+
+.berry-sprite--down {
+  padding-right: 10px;
+}
+
+.card-up {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
+  width: 280px;
+  padding: 15px 18px;
+  border-radius: 20px;
+  height: 225px;
+  text-transform: capitalize;
+  margin-left: 10px;
+  background-color: var(--color-bg-2);
+  -webkit-transform: rotate(-3deg);
+          transform: rotate(-3deg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+}
+
+.card-up__block-2 {
+  -webkit-transform: translate(25%, 0);
+          transform: translate(25%, 0);
+}
+
+.card-up__item {
+  padding: 5px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card-up__item:hover {
+  cursor: pointer;
+  -webkit-text-decoration: dotted;
+          text-decoration: dotted;
+  -webkit-animation: scale-up-center 0.7s linear infinite alternate both;
+          animation: scale-up-center 0.7s linear infinite alternate both;
+}
+
+.card-down {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
+  width: 280px;
+  padding: 15px 18px;
+  border-radius: 20px;
+  min-height: 270px;
+  margin-right: 20px;
+  background-color: var(--color-bg-3);
+  -webkit-transform: rotate(3deg);
+          transform: rotate(3deg);
+}
+
+.card-down__info {
+  text-align: center;
+}
+
+.card-down__berry {
+  text-transform: capitalize;
+}
+
+.card-down__title {
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card-down__table {
+  margin: auto;
+}
+
+.card-down__table--align-right {
+  text-align: right;
+  padding-right: 10px;
+}
+
+#snorlax-nature {
+  text-transform: capitalize;
+}
+
+.button {
+  margin: 30px;
+  padding: 10px 18px;
+  background-color: var(--color-button);
+  border-radius: 50px;
+  color: var(--color-bg-1);
+  text-align: center;
+}
+
+.button:hover {
+  -webkit-animation: scale-up-center 0.7s linear infinite alternate both;
+          animation: scale-up-center 0.7s linear infinite alternate both;
+  cursor: pointer;
+}
+
+.button .fa-chevron-circle-down {
+  padding-left: 10px;
+}
+
+.arrow {
+  font-size: 30px;
+  padding: 10px;
+  color: var(--grey-light);
+  position: absolute;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  top: 50%;
+}
+
+.arrow--left {
+  left: -40px;
+}
+
+.arrow--right {
+  right: -40px;
+}
+
+.arrow:hover {
+  cursor: pointer;
+  color: var(--grey-dark);
+}
+
+.snorlax {
+  width: 270px;
+  margin: 15px;
+  -webkit-animation: scale-up-bottom 3s cubic-bezier(0.39, 0.575, 0.565, 1) infinite alternate both;
+          animation: scale-up-bottom 3s cubic-bezier(0.39, 0.575, 0.565, 1) infinite alternate both;
+}
+
+.display-none {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */
