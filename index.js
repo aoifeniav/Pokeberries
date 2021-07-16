@@ -113,7 +113,7 @@ function printBerryDetailsBlock(details) {
     sweetDiv.innerText = details.flavors[2].potency;
     bitterDiv.innerText = details.flavors[3].potency;
     sourDiv.innerText = details.flavors[4].potency;
-    sizeDiv.innerText = details.size;
+    sizeDiv.innerText = `${details.size} mm`;
     typeDiv.innerText = details.natural_gift_type.name;
 }
 

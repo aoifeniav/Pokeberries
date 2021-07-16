@@ -17,12 +17,8 @@
     flex-direction: column;
     flex-wrap: wrap;
 
-    &__block-2 {
-        transform: translate(25%, 0);
-    }
-
     &__item {
-        padding: 5px 0;
+        padding: 5px 5px 5px 10px;
         display: flex;
         align-items: center;
 
@@ -36,10 +32,12 @@
 
 .card-down {
     @include card;
-    min-height: 270px;
+    height: 270px;
     margin-right: 20px;
     background-color: var(--color-bg-3);
     transform: rotate(3deg);
+    display: flex;
+    justify-content: center;
 
     &__info {
         text-align: center;
@@ -59,7 +57,10 @@
     }
 
     &__table {
-        margin: auto;
+
+        td {
+            width: 100px;
+        }
 
         &--align-right {
             text-align: right;
