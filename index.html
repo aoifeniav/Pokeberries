@@ -8,6 +8,8 @@
     <title>PokéBerries</title>
     <link rel="stylesheet" href="/css/style.css">
     <script src="https://kit.fontawesome.com/c4a8f670ae.js"></script>
+    <script src="list-declarations.js" defer></script>
+    <script src="detail-declarations.js" defer></script>
     <script src="index.js" defer></script>
 </head>
 
@@ -17,6 +19,7 @@
     </header>
     <main>
         <div class="card-up">
+            <div id="loader-up" class="display-none"></div> 
             <a class="arrow arrow--left display-none"><i class="fas fa-chevron-left"></i></a>
             <a class="arrow arrow--right"><i class="fas fa-chevron-right"></i></a>
             <div class="card-up__item">
@@ -68,6 +71,7 @@
                 <p id="snorlax-nature">nature</p>
             </div>
             <div class="card-down__berry display-none">
+                <div id="loader-down" class="display-none"></div> 
                 <div class="card-down__title">
                     <div class="berry-sprite--down"></div>
                     <div></div>

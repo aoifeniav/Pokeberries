@@ -1,3 +1,16 @@
+#loader-up,
+#loader-down {
+    border: 5px solid var(--color-white);
+    border-top: 5px solid var(--color-button);
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    animation: spin 0.5s linear infinite;
+    position: absolute;
+    top: calc(50% - 15px);
+    left: calc(50% - 15px);
+}
+
 .berry-sprite {
     padding-right: 10px;
 }
@@ -57,7 +70,6 @@
     }
 
     &__table {
-
         td {
             width: 100px;
         }

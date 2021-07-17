@@ -53,6 +53,28 @@ main {
           align-items: center;
 }
 
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 @-webkit-keyframes scale-up-center {
   0% {
     -webkit-transform: scale(0.95);
@@ -119,6 +141,20 @@ main {
           transform: rotate(-195deg);
 }
 
+#loader-up,
+#loader-down {
+  border: 5px solid var(--color-white);
+  border-top: 5px solid var(--color-button);
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  -webkit-animation: spin 0.5s linear infinite;
+          animation: spin 0.5s linear infinite;
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+}
+
 .berry-sprite {
   padding-right: 10px;
 }
@@ -135,6 +171,7 @@ main {
   width: 280px;
   padding: 15px 18px;
   border-radius: 20px;
+  position: relative;
   height: 225px;
   text-transform: capitalize;
   margin-left: 10px;
@@ -178,6 +215,7 @@ main {
   width: 280px;
   padding: 15px 18px;
   border-radius: 20px;
+  position: relative;
   height: 270px;
   margin-right: 20px;
   background-color: var(--color-bg-3);
