@@ -63,4 +63,23 @@ function printBerryDetailsBlock(details) {
     sourDiv.innerText = details.flavors[4].potency;
     sizeDiv.innerText = `${details.size} mm`;
     typeDiv.innerText = details.natural_gift_type.name;
+
+    activateFeedButton();
+}
+
+function activateFeedButton() {
+    const feedButton = document.querySelector('.button');
+    const buttonArrow = document.createElement('i');
+    buttonArrow.classList.add('fas', 'fa-chevron-circle-down');
+    feedButton.innerHTML = 'Feed';
+    feedButton.appendChild(buttonArrow);
+
+    feedButtonListener();
+}
+
+function feedButtonListener() {
+    const feedButton = document.querySelector('.button');
+    feedButton.addEventListener('click', function () {
+        flavorConditions();
+    });
 }

@@ -1,10 +1,3 @@
-function feedButtonListener() {
-    const feedButton = document.querySelector('.button');
-    feedButton.addEventListener('click', function () {
-        flavorConditions();
-    });
-}
-
 function berryItemFromListListener() {
     const berryItemFromList = document.querySelectorAll('.card-up__item div:last-child');
     for (let item of berryItemFromList) {
@@ -31,7 +24,6 @@ async function getBerriesList(url = 'https://pokeapi.co/api/v2/berry/?limit=10')
 function init() {
     getBerriesList();
     berryItemFromListListener();
-    feedButtonListener();
 }
 
 window.onload = function () {

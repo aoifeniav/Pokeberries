@@ -137,28 +137,24 @@
     .hearts {
         width: 60px;
         position: absolute;
-        top: -15px;
-        right: -15px;
-        transform: rotate(20deg);
-        z-index: 1;
-        animation-name: spaceOutUp;
+        top: -30px;
+        right: -20px;
+        animation: roll-in-blurred-bottom-hearts 0.7s cubic-bezier(0.23, 1, 0.32, 1) both;
     }
 
     .stars {
         width: 70px;
         position: absolute;
-        top: -15px;
-        left: -15px;
-        transform: rotate(-20deg);
-        z-index: 1;
-        animation-name: spaceOutUp;
+        top: -30px;
+        left: -20px;
+        animation: roll-in-blurred-bottom-stars 0.7s cubic-bezier(0.23, 1, 0.32, 1) both;
     }
 
     .rays {
-        width: 60px;
+        width: 70px;
         position: absolute;
-        top: 0;
-        left: 10px;
-        z-index: 1;
+        top: 35%;
+        left: 40%;
+        animation: shake-horizontal 0.7s cubic-bezier(0.680, -0.550, 0.265, 1.550) both;
     }
 }

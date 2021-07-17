@@ -1,9 +1,9 @@
-function displayReactions(reactionName) {
-    const element = document.querySelector(`.${reactionName}`);
-    element.classList.remove('display-none');
+function displayReaction(reactionName) {
+    const reactionImage = document.querySelector(`.${reactionName}`);
+    reactionImage.classList.remove('display-none');
     setTimeout(() => {
-        element.classList.add('display-none');
-    }, 1000);
+        reactionImage.classList.add('display-none');
+    }, 800);
 }
 
 function flavorConditions() {
@@ -16,10 +16,10 @@ function flavorConditions() {
 
     const firstMaxValue = Math.max(...flavorsList);
     if (firstMaxValue === flavorsList[0] && flavorsList.lastIndexOf(firstMaxValue) === 0) {
-        displayReactions('rays');
+        displayReaction('rays');
     } else if (firstMaxValue === flavorsList[2] && flavorsList.lastIndexOf(firstMaxValue) === 2) {
-        displayReactions('stars');
+        displayReaction('stars');
     } else {
-        displayReactions('hearts');
+        displayReaction('hearts');
     }
 }
