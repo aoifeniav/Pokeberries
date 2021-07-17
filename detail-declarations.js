@@ -21,6 +21,30 @@ async function getBerryDetails(url) {
     }
 }
 
+function hideInstructions() {
+    const instructionsCard = document.querySelector('.card-down__info');
+    instructionsCard.classList.add('display-none');
+}
+
+function showBerryCard() {
+    const berryCard = document.querySelector('.card-down__berry');
+    berryCard.classList.remove('display-none');
+}
+
+function printBerryDetailsTitle(details) {
+    const berryDetailsTitleDiv = document.querySelector('.card-down__title div:last-child');
+    berryDetailsTitleDiv.innerText = details.name;
+}
+
+function printBerryDetailsIcon(details) {
+    const berryDetailsIconDiv = document.querySelector('.card-down__title div:first-child');
+    berryDetailsIconDiv.innerHTML = '';
+    const berryDetailsIcon = document.createElement('img');
+    berryDetailsIcon.setAttribute('src', `./sprites/${details.name}.webp`);
+    berryDetailsIcon.setAttribute('alt', `${details.name} berry`);
+    berryDetailsIconDiv.appendChild(berryDetailsIcon);
+}
+
 function printBerryDetailsBlock(details) {
     const firmnessDiv = document.getElementById('firmness-value');
     const spicyDiv = document.getElementById('spicy-value');
@@ -39,28 +63,4 @@ function printBerryDetailsBlock(details) {
     sourDiv.innerText = details.flavors[4].potency;
     sizeDiv.innerText = `${details.size} mm`;
     typeDiv.innerText = details.natural_gift_type.name;
-}
-
-function showBerryCard() {
-    const berryCard = document.querySelector('.card-down__berry');
-    berryCard.classList.remove('display-none');
-}
-
-function hideInstructions() {
-    const instructionsCard = document.querySelector('.card-down__info');
-    instructionsCard.classList.add('display-none');
-}
-
-function printBerryDetailsTitle(details) {
-    const berryDetailsTitleDiv = document.querySelector('.card-down__title div:last-child');
-    berryDetailsTitleDiv.innerText = details.name;
-}
-
-function printBerryDetailsIcon(details) {
-    const berryDetailsIconDiv = document.querySelector('.card-down__title div:first-child');
-    berryDetailsIconDiv.innerHTML = '';
-    const berryDetailsIcon = document.createElement('img');
-    berryDetailsIcon.setAttribute('src', `./sprites/${details.name}.webp`);
-    berryDetailsIcon.setAttribute('alt', `${details.name} berry`);
-    berryDetailsIconDiv.appendChild(berryDetailsIcon);
 }

@@ -11,6 +11,10 @@
     left: calc(50% - 15px);
 }
 
+.display-none {
+    display: none;
+}
+
 .berry-sprite {
     padding-right: 10px;
 }
@@ -81,10 +85,6 @@
     }
 }
 
-#snorlax-nature {
-    text-transform: capitalize;
-}
-
 .button {
     margin: 30px;
     padding: 10px 18px;
@@ -125,12 +125,40 @@
     }
 }
 
-.snorlax {
-    width: 270px;
-    margin: 15px;
-    animation: scale-up-bottom 3s cubic-bezier(0.39, 0.575, 0.565, 1) infinite alternate both;
-}
+.img-group {
+    position: relative;
 
-.display-none {
-    display: none;
+    .snorlax {
+        width: 270px;
+        margin: 15px;
+        animation: scale-up-bottom 3s cubic-bezier(0.39, 0.575, 0.565, 1) infinite alternate both;
+    }
+
+    .hearts {
+        width: 60px;
+        position: absolute;
+        top: -15px;
+        right: -15px;
+        transform: rotate(20deg);
+        z-index: 1;
+        animation-name: spaceOutUp;
+    }
+
+    .stars {
+        width: 70px;
+        position: absolute;
+        top: -15px;
+        left: -15px;
+        transform: rotate(-20deg);
+        z-index: 1;
+        animation-name: spaceOutUp;
+    }
+
+    .rays {
+        width: 60px;
+        position: absolute;
+        top: 0;
+        left: 10px;
+        z-index: 1;
+    }
 }

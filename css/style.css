@@ -127,6 +127,40 @@ main {
   }
 }
 
+@-webkit-keyframes spaceOutUp {
+  0% {
+    opacity: 1;
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    -webkit-transform: scale(0.2) translate(0%, 0%);
+            transform: scale(0.2) translate(0%, 0%);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    -webkit-transform: scale(1) translate(0%, -200%);
+            transform: scale(1) translate(0%, -200%);
+  }
+}
+
+@keyframes spaceOutUp {
+  0% {
+    opacity: 1;
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    -webkit-transform: scale(0.2) translate(0%, 0%);
+            transform: scale(0.2) translate(0%, 0%);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    -webkit-transform: scale(1) translate(0%, -200%);
+            transform: scale(1) translate(0%, -200%);
+  }
+}
+
 .poke-title {
   font-family: 'Lemon Grass';
   font-size: 65px;
@@ -153,6 +187,10 @@ main {
   position: absolute;
   top: calc(50% - 15px);
   left: calc(50% - 15px);
+}
+
+.display-none {
+  display: none;
 }
 
 .berry-sprite {
@@ -261,10 +299,6 @@ main {
   padding-right: 10px;
 }
 
-#snorlax-nature {
-  text-transform: capitalize;
-}
-
 .button {
   margin: 30px;
   padding: 10px 18px;
@@ -307,14 +341,46 @@ main {
   color: var(--grey-dark);
 }
 
-.snorlax {
+.img-group {
+  position: relative;
+}
+
+.img-group .snorlax {
   width: 270px;
   margin: 15px;
   -webkit-animation: scale-up-bottom 3s cubic-bezier(0.39, 0.575, 0.565, 1) infinite alternate both;
           animation: scale-up-bottom 3s cubic-bezier(0.39, 0.575, 0.565, 1) infinite alternate both;
 }
 
-.display-none {
-  display: none;
+.img-group .hearts {
+  width: 60px;
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
+  z-index: 1;
+  -webkit-animation-name: spaceOutUp;
+          animation-name: spaceOutUp;
+}
+
+.img-group .stars {
+  width: 70px;
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+  z-index: 1;
+  -webkit-animation-name: spaceOutUp;
+          animation-name: spaceOutUp;
+}
+
+.img-group .rays {
+  width: 60px;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  z-index: 1;
 }
 /*# sourceMappingURL=style.css.map */
