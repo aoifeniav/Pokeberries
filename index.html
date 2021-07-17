@@ -19,100 +19,102 @@
         <h1 class="poke-title">Poké<i class="fas fa-leaf"></i></i>Berries</h1>
     </header>
     <main>
-        <div class="card-up">
-            <div id="loader-up" class="display-none"></div> 
-            <a class="arrow arrow--left display-none"><i class="fas fa-chevron-left"></i></a>
-            <a class="arrow arrow--right"><i class="fas fa-chevron-right"></i></a>
-            <div class="card-up__item">
-                <div class="berry-sprite"></div>
-                <div></div>
-            </div>
-            <div class="card-up__item">
-                <div class="berry-sprite"></div>
-                <div></div>
-            </div>
-            <div class="card-up__item">
-                <div class="berry-sprite"></div>
-                <div></div>
-            </div>
-            <div class="card-up__item">
-                <div class="berry-sprite"></div>
-                <div></div>
-            </div>
-            <div class="card-up__item">
-                <div class="berry-sprite"></div>
-                <div></div>
-            </div>
-            <div class="card-up__item">
-                <div class="berry-sprite"></div>
-                <div></div>
-            </div>
-            <div class="card-up__item">
-                <div class="berry-sprite"></div>
-                <div></div>
-            </div>
-            <div class="card-up__item">
-                <div class="berry-sprite"></div>
-                <div></div>
-            </div>
-            <div class="card-up__item">
-                <div class="berry-sprite"></div>
-                <div></div>
-            </div>
-            <div class="card-up__item">
-                <div class="berry-sprite"></div>
-                <div></div>
-            </div>
-        </div>
-        <div class="card-down">
-            <div class="card-down__info">
-                <p>Oh, no! Snorlax is hungry!</p>
-                <p>Pick a berry from the list above to see its details.</p>
-                <p>Once you've made your choice, press the button below to feed it to Snorlax.</p>
-                <p>Different flavors will have different effects.</p>
-            </div>
-            <div class="card-down__berry display-none">
-                <div id="loader-down" class="display-none"></div> 
-                <div class="card-down__title">
-                    <div class="berry-sprite--down"></div>
+        <div class="cards-container">
+            <div class="card-up">
+                <div id="loader-up" class="display-none"></div>
+                <a class="arrow arrow--left display-none"><i class="fas fa-chevron-left"></i></a>
+                <a class="arrow arrow--right"><i class="fas fa-chevron-right"></i></a>
+                <div class="card-up__item">
+                    <div class="berry-sprite"></div>
                     <div></div>
                 </div>
-                <table class="card-down__table">
-                    <tbody>
-                        <tr>
-                            <td colspan="2" class="card-down__table--align-right">Firmness:</td>
-                            <td id="firmness-value"></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" class="card-down__table--align-right">Flavor:</td>
-                            <td>Spicy: <span id='spicy-value'></span></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2"></td>
-                            <td>Dry: <span id='dry-value'></span></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2"></td>
-                            <td>Sweet: <span id='sweet-value'></span></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2"></td>
-                            <td>Bitter: <span id='bitter-value'></span></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2"></td>
-                            <td>Sour: <span id='sour-value'></span></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" class="card-down__table--align-right">Size:<br></td>
-                            <td id="size-value"></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" class="card-down__table--align-right">Type:</td>
-                            <td id="type-value"></td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="card-up__item">
+                    <div class="berry-sprite"></div>
+                    <div></div>
+                </div>
+                <div class="card-up__item">
+                    <div class="berry-sprite"></div>
+                    <div></div>
+                </div>
+                <div class="card-up__item">
+                    <div class="berry-sprite"></div>
+                    <div></div>
+                </div>
+                <div class="card-up__item">
+                    <div class="berry-sprite"></div>
+                    <div></div>
+                </div>
+                <div class="card-up__item">
+                    <div class="berry-sprite"></div>
+                    <div></div>
+                </div>
+                <div class="card-up__item">
+                    <div class="berry-sprite"></div>
+                    <div></div>
+                </div>
+                <div class="card-up__item">
+                    <div class="berry-sprite"></div>
+                    <div></div>
+                </div>
+                <div class="card-up__item">
+                    <div class="berry-sprite"></div>
+                    <div></div>
+                </div>
+                <div class="card-up__item">
+                    <div class="berry-sprite"></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="card-down">
+                <div class="card-down__info">
+                    <p>Oh, no! Snorlax is hungry!</p>
+                    <p>Pick a berry from the catalogue to see its details.</p>
+                    <p>Once you've made your choice, press the button to feed it to Snorlax.</p>
+                    <p>Different flavors will have different effects.</p>
+                </div>
+                <div class="card-down__berry display-none">
+                    <div id="loader-down" class="display-none"></div>
+                    <div class="card-down__title">
+                        <div class="berry-sprite--down"></div>
+                        <div></div>
+                    </div>
+                    <table class="card-down__table">
+                        <tbody>
+                            <tr>
+                                <td colspan="2" class="card-down__table--align-right">Firmness:</td>
+                                <td id="firmness-value"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="card-down__table--align-right">Flavor:</td>
+                                <td>Spicy: <span id='spicy-value'></span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td>Dry: <span id='dry-value'></span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td>Sweet: <span id='sweet-value'></span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td>Bitter: <span id='bitter-value'></span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td>Sour: <span id='sour-value'></span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="card-down__table--align-right">Size:<br></td>
+                                <td id="size-value"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="card-down__table--align-right">Type:</td>
+                                <td id="type-value"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
         <div class="button">Choose berry</div>
